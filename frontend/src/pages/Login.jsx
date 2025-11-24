@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import API from '../services/api';
 import { useNavigate } from 'react-router-dom';
+import toast from 'react-hot-toast';
 
 export default function Login({ setToken }) {
   const [form, setForm] = useState({ email: '', password: '' });
@@ -8,10 +9,23 @@ export default function Login({ setToken }) {
 
   const submit = async (e) => {
     e.preventDefault();
-    const res = await API.post('/auth/login', form);
-    localStorage.setItem('token', res.data.token);
-    setToken(res.data.token);
-    navigate('/dashboard');
+    try {
+      const res = await API.post('/auth/login', form);
+      localStorage.setItem('token', res.data.token);
+      setToken(res.data.token);
+      
+      toast.success('Login  successfully! Welcome to HRMS Pro');
+      navigate('/dashboard');
+      
+    } catch (err) {
+      const errorMsg = err.response?.data?.error || 'Login failed';
+      if (errorMsg){
+        toast.error(errorMsg);
+      }else{
+        toast.error('Login failed');
+      }
+     
+    }
   };
 
   return (
