@@ -38,6 +38,9 @@ export default function RegisterOrg({ setToken }) {
           <input type="email" placeholder="Email" value={form.email} onChange={e => setForm({ ...form, email: e.target.value })} required className="w-full p-4 border-1 rounded-sm" />
           <input type="password" placeholder="Password" value={form.password} onChange={e => setForm({ ...form, password: e.target.value })} required className="w-full p-4 border-1 rounded-sm" />
           <button type="submit" className="w-full bg-black text-white py-4 rounded-sm font-semibold text-xl">Create & Login</button>
+       <p className="text-center mt-3">
+          <button onClick={() => navigate('/login')} className="text-indigo-600 underline">Login</button>
+        </p>
         </form>
       </div>
     </div>
