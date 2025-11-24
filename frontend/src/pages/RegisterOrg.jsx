@@ -29,15 +29,15 @@ export default function RegisterOrg({ setToken }) {
   };
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-indigo-600 to-purple-700 flex items-center justify-center">
-      <div className="bg-white p-12 rounded-3xl shadow-2xl w-full max-w-md">
+    <div className="min-h-screen flex items-center justify-center">
+      <div className="bg-white p-12 rounded-3xl  w-full max-w-md">
         <h2 className="text-4xl font-bold text-center mb-10">Create Company</h2>
         <form onSubmit={submit} className="space-y-6">
-          <input placeholder="Company Name" value={form.orgName} onChange={e => setForm({ ...form, orgName: e.target.value })} required className="w-full p-4 border-2 rounded-xl" />
-          <input placeholder="Your Name" value={form.adminName} onChange={e => setForm({ ...form, adminName: e.target.value })} required className="w-full p-4 border-2 rounded-xl" />
-          <input type="email" placeholder="Email" value={form.email} onChange={e => setForm({ ...form, email: e.target.value })} required className="w-full p-4 border-2 rounded-xl" />
-          <input type="password" placeholder="Password" value={form.password} onChange={e => setForm({ ...form, password: e.target.value })} required className="w-full p-4 border-2 rounded-xl" />
-          <button type="submit" className="w-full bg-purple-600 text-white py-4 rounded-xl font-bold text-xl">Create & Login</button>
+          <input placeholder="Company Name" value={form.orgName} onChange={e => setForm({ ...form, orgName: e.target.value })} required className="w-full p-4 border-1 rounded-sm" />
+          <input placeholder="Your Name" value={form.adminName} onChange={e => setForm({ ...form, adminName: e.target.value })} required className="w-full p-4 border-1 rounded-sm" />
+          <input type="email" placeholder="Email" value={form.email} onChange={e => setForm({ ...form, email: e.target.value })} required className="w-full p-4 border-1 rounded-sm" />
+          <input type="password" placeholder="Password" value={form.password} onChange={e => setForm({ ...form, password: e.target.value })} required className="w-full p-4 border-1 rounded-sm" />
+          <button type="submit" className="w-full bg-black text-white py-4 rounded-sm font-semibold text-xl">Create & Login</button>
         </form>
       </div>
     </div>
