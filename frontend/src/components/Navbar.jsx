@@ -49,7 +49,7 @@ export default function Navbar({ setToken }) {
             ))}
             <button
               onClick={logout}
-              className="flex items-center gap-2 bg-white text-black px-6 py-3 rounded-xl font-semibold hover:bg-gray-200 transition transform hover:scale-105"
+              className="flex items-center gap-2 bg-white text-black px-6 py-3 rounded-md font-semibold "
             >
              
               Logout
@@ -84,7 +84,7 @@ export default function Navbar({ setToken }) {
               ))}
               <button
                 onClick={logout}
-                className="flex items-center gap-4 bg-white text-black px-6 py-4 rounded-xl font-bold text-lg hover:bg-gray-200 transition mt-4"
+                className="flex items-center gap-4 bg-white text-black px-6 py-4 rounded-md font-bold text-lg mt-4"
               >
               
                 Logout

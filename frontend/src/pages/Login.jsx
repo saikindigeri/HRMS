@@ -14,7 +14,7 @@ export default function Login({ setToken }) {
       localStorage.setItem('token', res.data.token);
       setToken(res.data.token);
       
-      toast.success('Login  successfully! Welcome to HRMS Pro');
+      toast.success('Login  Success! Welcome to HRMS Pro');
       navigate('/dashboard');
       
     } catch (err) {
